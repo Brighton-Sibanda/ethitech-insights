@@ -9,6 +9,7 @@ import DimensionsPage from './DimensionsPage';
 import AboutPage from './AboutPage';
 import ThoughtCorner from './ThoughtCorner';
 import DiversityPage from './DiversityPage';
+import DefineEthics from './DefineEthics';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/thought-corner" element={<ThoughtCorner />} />
           <Route path="/diversity" element={<DiversityPage />} />
+          <Route path="/defineethics" element={<DefineEthics />} />
+
         </Routes>
       </div>
       <Footer />
