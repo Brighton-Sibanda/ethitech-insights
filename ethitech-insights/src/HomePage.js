@@ -16,7 +16,10 @@ const HomePage = () => {
         <Link to="/thought-corner" className="btn btn-info btn-lg m-2">Thought Corner</Link>
         <Link to="/diversity" className="btn btn-warning btn-lg m-2">Diversity and Technology</Link>
         <Link to="/about" className="btn btn-success btn-lg m-2">About Us</Link>
-        <Link to="/defineethics" className="btn btn-success btn-lg m-2">What Is Ethics</Link>
+        <Link to="/defineethics" className="btn btn-info btn-red btn-lg m-2">What Is Ethics</Link>
+        <Link to="/casestudies" className="btn btn-warning btn-red btn-lg m-2">Case Studies</Link>
+        <Link to="/debate" className="btn btn-primary btn-red btn-lg m-2">Ethics Debates</Link>
+        <Link to="/simulator" className="btn btn-secondary btn-red btn-lg m-2">Decision Simulator</Link>
       </div>
     </div>
   );

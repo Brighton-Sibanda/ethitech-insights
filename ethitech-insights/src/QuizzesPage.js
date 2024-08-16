@@ -1,5 +1,5 @@
 // src/components/QuizzesPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const quizzes = [
     {
@@ -160,25 +160,29 @@ const QuizzesPage = () => {
     const [score, setScore] = useState(0);
     const [submitted, setSubmitted] = useState(false);
 
+    useEffect(() => {
+        if (userAnswer !== null && !submitted) {
+            if (userAnswer === quizzes[currentQuiz].answer) {
+                setScore(prevScore => prevScore + 1); // Functional update to address dependency issue
+            }
+            setSubmitted(true);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [userAnswer]); // currentQuiz and submitted are deliberately omitted here if they don't change across this effect's calls
+
     const handleOptionClick = (index) => {
         setUserAnswer(index);
-        setSubmitted(false);
-    };
-
-    const submitAnswer = () => {
-        if (userAnswer === quizzes[currentQuiz].answer) {
-            setScore(score + 1);
-        }
-        setSubmitted(true);
-        setUserAnswer(null); // Reset for next question
     };
 
     const nextQuestion = () => {
         if (currentQuiz < quizzes.length - 1) {
             setCurrentQuiz(currentQuiz + 1);
+            setUserAnswer(null); // Reset for next question
             setSubmitted(false);
         } else {
             alert(`Your final score is ${score}/${quizzes.length}`);
+            setCurrentQuiz(0); // Optionally reset the quiz
+            setScore(0); // Optionally reset the score
         }
     };
 
@@ -202,10 +206,10 @@ const QuizzesPage = () => {
                         </div>
                     )}
                     <div className="mt-3">
-                        {!submitted ? (
-                            <button className="btn btn-primary" onClick={submitAnswer}>Submit Answer</button>
-                        ) : (
+                        {submitted ? (
                             <button className="btn btn-secondary" onClick={nextQuestion}>Next Question</button>
+                        ) : (
+                            <button className="btn btn-primary" onClick={() => setUserAnswer(userAnswer)}>Submit Answer</button>
                         )}
                     </div>
                 </div>

@@ -1,5 +1,5 @@
-// src/components/DimensionsPage.js
-import React from 'react';
+//DimensionsPage.js
+import React, { useState } from 'react';
 
 const dimensions = [
   { title: "Privacy", description: "Exploring the significance of user privacy in technology." },
@@ -9,14 +9,20 @@ const dimensions = [
 ];
 
 const DimensionsPage = () => {
+  const [selectedDimension, setSelectedDimension] = useState(null);
+
+  const toggleDetail = index => {
+    setSelectedDimension(selectedDimension === index ? null : index);
+  };
+
   return (
     <div className="container py-5">
-      <h2 className="mb-3">Dimensions of Ethics in Technology</h2>
+      <h2 className="mb-3">Dimensions of Ethics in Technology (click on an element to learn more)</h2>
       {dimensions.map((dimension, index) => (
-        <div className="card mb-3" key={index}>
+        <div className={`card mb-3 ${selectedDimension === index ? 'active' : ''}`} key={index} onClick={() => toggleDetail(index)}>
           <div className="card-body">
             <h5 className="card-title">{dimension.title}</h5>
-            <p className="card-text">{dimension.description}</p>
+            {selectedDimension === index && <p className="card-text">{dimension.description}</p>}
           </div>
         </div>
       ))}
@@ -25,3 +31,4 @@ const DimensionsPage = () => {
 };
 
 export default DimensionsPage;
+

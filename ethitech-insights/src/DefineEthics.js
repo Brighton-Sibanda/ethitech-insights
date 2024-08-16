@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const DefineEthics = () => {
     return (
         <div style={{ padding: 20 }}>
-      <Typography variant="h4" gutterBottom>Welcome to Ethics in Technology</Typography>
+      <Typography variant="h4" gutterBottom>Welcome to Ethics in Technology - Inspired by (Shannon Vallor, Irina Raicu, Brian Green)</Typography>
       <Card style={{ margin: '20px 0', padding: 20 }}>
         <CardContent>
           <Typography variant="h6">Introduction</Typography>

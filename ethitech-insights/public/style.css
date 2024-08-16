@@ -5,34 +5,8 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
   }
-  
-  /* Navigation Bar */
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent black */
-  }
-  
-  .nav-link {
-    color: #f8f9fa !important;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #9bc3f5 !important; /* Light blue on hover */
-  }
-  
-  /* Sticky Footer */
-  footer {
-    background-color: #222;
-    color: rgb(245, 229, 229);
-    text-align: center;
-    align-items: center;
-    bottom: 0;
-    padding-bottom: 10vh;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    position: fixed;
-  }
-  
+
+   
   /* Main Container */
   .container {
     padding: 20px;
@@ -60,3 +34,130 @@ body, html {
     margin-top: 1.5rem;
   }
   
+  /* Navigation Bar */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent black */
+  }
+  
+  .nav-link {
+    color: #f8f9fa !important;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #9bc3f5 !important; /* Light blue on hover */
+  }
+  
+  /* Sticky Footer */
+  footer {
+    background-color: #222;
+    color: rgb(245, 229, 229);
+    text-align: center;
+    align-items: center;
+    bottom: 0;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    position: fixed;
+  }
+ 
+/* Dimensions Page */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.active {
+  border-left: 5px solid #007BFF; /* Highlight active card */
+}
+
+.card-body {
+  transition: height 0.3s ease;
+}
+
+  
+
+/* Case Studies Styling */
+.case-study-container {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Debate Styling */
+.debate-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+input {
+  padding: 8px;
+  margin-right: 5px;
+  width: 70%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Simulator Styling */
+
+.simulator-container {
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #007ba7;
+}

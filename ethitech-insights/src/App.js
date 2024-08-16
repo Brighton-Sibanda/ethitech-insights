@@ -10,6 +10,9 @@ import AboutPage from './AboutPage';
 import ThoughtCorner from './ThoughtCorner';
 import DiversityPage from './DiversityPage';
 import DefineEthics from './DefineEthics';
+import CaseStudy from './CaseStudies';
+import Debate from './Debate';
+import Simulator from './Simulator';
 
 function App() {
   return (
@@ -24,7 +27,9 @@ function App() {
           <Route path="/thought-corner" element={<ThoughtCorner />} />
           <Route path="/diversity" element={<DiversityPage />} />
           <Route path="/defineethics" element={<DefineEthics />} />
-
+          <Route path="/casestudies" element={<CaseStudy />} />
+          <Route path="/debate" element={<Debate />} />
+          <Route path="/simulator" element={<Simulator />} />
         </Routes>
       </div>
       <Footer />
