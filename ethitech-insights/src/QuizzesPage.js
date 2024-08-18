@@ -1,4 +1,4 @@
-// src/components/QuizzesPage.js
+// QuizzesPage.js
 import React, { useState, useEffect } from 'react';
 
 const quizzes = [
@@ -188,7 +188,7 @@ const QuizzesPage = () => {
 
     return (
         <div className="container py-5">
-            <h2 className="mb-3">Mini Ethics Quizzes</h2>
+            <h2 className="mb-3">Mini Ethics Quizzes <a href="https://www.scu.edu/ethics-in-technology-practice/overview-of-ethics-in-tech-practice/">(Helpful resource)</a></h2>
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">{quizzes[currentQuiz].question}</h5>

@@ -1,4 +1,4 @@
-// src/components/ThoughtCorner.js
+// ThoughtCorner.js
 import React, { useState } from 'react';
 
 const thoughts = [

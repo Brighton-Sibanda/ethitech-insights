@@ -142,22 +142,55 @@ input {
 /* Simulator Styling */
 
 .simulator-container {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
   padding: 20px;
-  background-color: #f2f2f2;
+  max-width: 600px;
+  background: #f7f7f7;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin: auto;
 }
-button {
-  margin: 5px;
-  padding: 8px 16px;
-  background-color: #008CBA;
+
+.scenario-selection h2, .scenario-details h3 {
+  text-align: center;
+  color: #333;
+}
+
+.scenario-button, .decision-button, .back-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
   color: white;
+  background-color: #007BFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-button:hover {
-  background-color: #007ba7;
+
+.scenario-button:hover, .decision-button:hover, .back-button:hover {
+  background-color: #0056b3;
+}
+
+.impact-text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+.back-button {
+  background-color: #6c757d; /* Different color for back button */
+  margin-top: 20px; /* More space from the last decision button */
+}
+
+.scenario-details {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

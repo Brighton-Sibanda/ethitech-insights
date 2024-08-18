@@ -1,4 +1,4 @@
-// src/components/DiversityPage.js
+// DiversityPage.js
 import React from 'react';
 
 const DiversityPage = () => {

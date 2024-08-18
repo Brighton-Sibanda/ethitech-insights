@@ -1,4 +1,4 @@
-// src/App.js
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar';
@@ -11,7 +11,6 @@ import ThoughtCorner from './ThoughtCorner';
 import DiversityPage from './DiversityPage';
 import DefineEthics from './DefineEthics';
 import CaseStudy from './CaseStudies';
-import Debate from './Debate';
 import Simulator from './Simulator';
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
           <Route path="/diversity" element={<DiversityPage />} />
           <Route path="/defineethics" element={<DefineEthics />} />
           <Route path="/casestudies" element={<CaseStudy />} />
-          <Route path="/debate" element={<Debate />} />
           <Route path="/simulator" element={<Simulator />} />
         </Routes>
       </div>

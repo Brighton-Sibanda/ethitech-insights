@@ -2,10 +2,22 @@
 import React, { useState } from 'react';
 
 const dimensions = [
-  { title: "Privacy", description: "Exploring the significance of user privacy in technology." },
-  { title: "Data Security", description: "Understanding the importance of securing user data against breaches." },
-  { title: "AI Ethics", description: "Debating the moral implications of AI decisions and biases." },
-  { title: "Racial Inequality in Tech", description: "Addressing racial disparities in technology access and development." },
+  { 
+    title: "Privacy", 
+    description: "Exploring the significance of user privacy in technology. This includes understanding how personal information is collected, used, and protected by tech companies. For example, consider how social media platforms manage user data or the implications of surveillance technologies in public spaces."
+  },
+  { 
+    title: "Data Security", 
+    description: "Understanding the importance of securing user data against breaches. This involves practices and technologies that protect data from unauthorized access and cyber threats. An example is the use of encryption to secure user data transmitted over the Internet or implementing strict access controls within an organization."
+  },
+  { 
+    title: "AI Ethics", 
+    description: "Debating the moral implications of AI decisions and biases. This includes how algorithms can perpetuate biases or the ethical considerations in autonomous decision-making systems, such as self-driving cars and their decision protocols in accident scenarios."
+  },
+  { 
+    title: "Racial Inequality in Tech", 
+    description: "Addressing racial disparities in technology access and development. This concerns how technology may reinforce social biases and the underrepresentation of racial minorities in tech sectors. An example is bias in facial recognition technology that fails to accurately recognize faces from various racial backgrounds."
+  }
 ];
 
 const DimensionsPage = () => {
