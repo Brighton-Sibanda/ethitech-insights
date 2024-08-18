@@ -201,10 +201,11 @@ const QuizzesPage = () => {
                         ))}
                     </div>
                     {submitted && (
-                        <div className="mt-3">
-                            <p className="text-success">{userAnswer === quizzes[currentQuiz].answer ? 'Correct!' : 'Wrong answer!'}</p>
-                        </div>
-                    )}
+                      <div className="mt-3">
+                        <p className={userAnswer === quizzes[currentQuiz].answer ? 'text-success' : 'text-danger'}>
+                        {userAnswer === quizzes[currentQuiz].answer ? 'Correct!' : 'Wrong answer!'}
+                        </p>
+                      </div>)}
                     <div className="mt-3">
                         {submitted ? (
                             <button className="btn btn-secondary" onClick={nextQuestion}>Next Question</button>
@@ -213,6 +214,9 @@ const QuizzesPage = () => {
                         )}
                     </div>
                 </div>
+                <div className="score-display bg-light p-2 rounded">
+                              <span className="badge bg-info text-dark">Score: {score} / {currentQuiz}</span>
+                            </div>
             </div>
         </div>
     );
