@@ -182,8 +182,8 @@ input {
 }
 
 .back-button {
-  background-color: #6c757d; /* Different color for back button */
-  margin-top: 20px; /* More space from the last decision button */
+  background-color: #6c757d;
+  margin-top: 20px;
 }
 
 .scenario-details {
@@ -194,3 +194,27 @@ input {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px; 
+}
+
+
+.option-button {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+  background-color: green;
+  cursor: pointer;
+  width: 100%; 
+  text-align: left;
+}
+
+.option-button:hover {
+  background-color: #b4e3a8;
+}
+
+
